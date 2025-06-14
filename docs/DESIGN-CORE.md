@@ -38,6 +38,9 @@ slides:
         to: component1
         at: 2.0
         duration: 1.5
+
+```
+
 🧩 Animation Primitives
 Primitive	Purpose
 box	Create a labeled rectangle
@@ -76,9 +79,7 @@ attachedTo	string	Used for callout or highlight
 style	string	Optional styling directive
 
 🔖 Example: "FluxCD Polls Git"
-yaml
-Copy
-Edit
+```yaml
 - title: "FluxCD Watches Git"
   description: "FluxCD continuously polls the Git repository."
   voice: "FluxCD monitors Git for changes and reacts automatically."
@@ -103,3 +104,4 @@ Edit
     - type: callout
       text: "Polling every 1m"
       attachedTo: flux
+```

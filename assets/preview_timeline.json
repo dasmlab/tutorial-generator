@@ -1,0 +1,23 @@
+[
+  {
+    "at": 0,
+    "duration": 800,
+    "type": "Box",
+    "params": {
+      "id": "box1",
+      "text": "Start Here",
+      "x": 100,
+      "y": 100
+    }
+  },
+  {
+    "at": 800,
+    "duration": 600,
+    "type": "Arrow",
+    "params": {
+      "from": "box1",
+      "to": "box2"
+    }
+  }
+]
+

@@ -1,17 +1,11 @@
 #!/bin/bash
-
 set -e
 
-TUTORIAL_PATH="$1"
+MANIFEST_FILE=$1
+OUTFILE="./assets/preview_timeline.json"
 
-if [ -z "$TUTORIAL_PATH" ]; then
-  echo "Usage: ./render_local.sh <path/to/tutorial.yaml>"
-  exit 1
-fi
+echo "🧾 Parsing manifest: $MANIFEST_FILE"
+go run main.go "$MANIFEST_FILE" "$OUTFILE"
 
-echo "🔍 Parsing manifest..."
-go run renderer/manifest_loader.go "$TUTORIAL_PATH"
-
-echo "🎬 Simulating playback..."
-go run player/engine.go
+echo "✅ Timeline written to: $OUTFILE"
 

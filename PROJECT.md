@@ -82,6 +82,9 @@ dasmlab_tuto_generator/
 ---
 
 ## 📅 Current Status
+
 > We are currently in **Phase 1: Manifest + Renderer Setup**
+- **GOAL** - Render a basic manifest-driven tutorial in a browser - just static shapes, arroes and a timeline-sequenced movement based on our YAML
+
 
 See [README.md](./README.md) for usage instructions.

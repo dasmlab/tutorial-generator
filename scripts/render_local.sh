@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
+echo "🧠 Generating timeline from $1"
+go run renderer/manifest_loader.go "$1" > assets/preview_timeline.json
 
-MANIFEST_FILE=$1
-OUTFILE="./assets/preview_timeline.json"
+echo "🗣️  Writing subtitle file..."
+go run tts_engine/subtitle_writer.go "$1"
 
-echo "🧾 Parsing manifest: $MANIFEST_FILE"
-go run main.go "$MANIFEST_FILE" "$OUTFILE"
-
-echo "✅ Timeline written to: $OUTFILE"
+echo "🎬 Launching browser"
+xdg-open player/index.html
 

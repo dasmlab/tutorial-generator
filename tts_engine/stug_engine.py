@@ -1,15 +1,19 @@
+# tts_engine/stub_engine.py
 import sys
-import logging
+import yaml
 
-logging.basicConfig(level=logging.INFO)
+def run_voice_engine(manifest_file):
+    with open(manifest_file, 'r') as f:
+        data = yaml.safe_load(f)
 
-def speak(text: str):
-    """Stub TTS engine that logs the voice string."""
-    logging.info(f"[VOICE] {text}")
+    for slide in data:
+        voice = slide.get('voice')
+        if voice:
+            print(f"[🔈] Voice: {voice}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: stub_engine.py '<text>'")
+    if len(sys.argv) != 2:
+        print("Usage: python stub_engine.py <manifest.yaml>")
         sys.exit(1)
-    speak(sys.argv[1])
+    run_voice_engine(sys.argv[1])
 

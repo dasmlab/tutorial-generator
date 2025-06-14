@@ -1,0 +1,31 @@
+- title: "FluxCD GitOps Pipeline"
+  description: "This tutorial walks through a Git commit triggering FluxCD to apply changes."
+  voice: "Let's walk through the GitOps pipeline from commit to deployment."
+  animations:
+    - type: box
+      payload:
+        id: "git"
+        label: "GitHub Repo"
+        x: 50
+        y: 50
+      at: 0
+    - type: box
+      payload:
+        id: "flux"
+        label: "FluxCD"
+        x: 250
+        y: 50
+      at: 1
+    - type: arrow
+      payload:
+        from: "git"
+        to: "flux"
+        label: "Push Event"
+      at: 2
+    - type: callout
+      payload:
+        text: "FluxCD detects new commit and syncs"
+        x: 150
+        y: 20
+      at: 3
+

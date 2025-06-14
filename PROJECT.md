@@ -50,6 +50,48 @@ Enable consistent, branded educational flows for each `dasmlab` project via a de
 - Generate social sharing links
 
 ---
+## 📈 Project Progress Tracker
+
+---
+
+### ✅ Phase 1: Core Architecture + Manifest Loader (COMPLETE)
+
+- [x] Define YAML/JSON manifest structure
+- [x] Create `renderer/manifest_loader.go` to parse manifest files
+- [x] Support for primitives: `box`, `arrow`, `callout`, `fadeIn`, `moveTo`
+- [x] Stub voice engine interface in `tts_engine/`
+- [x] Loadable tutorial manifest (`tutorials/sample_flux_demo.yaml`)
+- [x] CLI tool in `scripts/render_local.sh`
+
+🎯 **Goal Achieved:** Parsed manifest file fully loads into structured Go data. Ready for rendering layer.
+
+---
+
+### 🚧 Phase 2: Build Frontend Engine (IN PROGRESS)
+
+**Goal:** Render a basic tutorial animation using a canvas/SVG in a browser, driven entirely by the parsed YAML manifest.
+
+#### Tasks:
+- [ ] Implement basic frontend player in `player/`
+- [ ] Choose tech: plain HTML/JS or Vue.js (Quasar optional)
+- [ ] Support timeline execution (`at`, `duration`)
+- [ ] Animate:
+  - [ ] 🎁 Draw box
+  - [ ] ➡️ Draw arrow
+  - [ ] 💬 Show callout
+  - [ ] ✨ Fade in/out
+
+📁 Target file: `sample_flux_demo.yaml`  
+🧪 Output: A working animation of 2 boxes, 1 arrow, 1 callout, 1 voice string.
+
+---
+
+### ⏭️ Upcoming Phases
+
+_TBD: voice synthesis, user interactivity, animation templating, multi-language support, etc._
+
+
+---
 
 ## 📁 Example Structure
 

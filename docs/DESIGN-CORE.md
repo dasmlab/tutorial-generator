@@ -41,7 +41,7 @@ slides:
 
 ```
 
-🧩 Animation Primitives
+## 🧩 Animation Primitives
 Primitive	Purpose
 box	Create a labeled rectangle
 arrow	Draw an arrow from one component to another
@@ -52,7 +52,7 @@ highlight	Highlight or pulse an element
 callout	Show floating annotation text box
 group	Group multiple items for batch operations
 
-⏱️ Animation Timing & Control
+## ⏱️ Animation Timing & Control
 Each animation can optionally include:
 
 Field	Meaning
@@ -61,14 +61,15 @@ duration	How long the animation runs
 pauseAfter	Pause duration after this step
 trigger	Optional trigger (e.g., onClick, onVoiceEnd)
 
-🎙️ Voice/Narration
+## 🎙️ Voice/Narration
+
 voice: field per slide (plain text)
 
 Used to auto-generate voiceover via TTS
 
 Timeline syncs with animation pacing
 
-📦 Schema Fields Reference
+## 📦 Schema Fields Reference
 Field	Type	Description
 type	string	One of the animation primitives
 id	string	Unique identifier for reference
@@ -78,7 +79,7 @@ from, to	string	Used for arrow type animations
 attachedTo	string	Used for callout or highlight
 style	string	Optional styling directive
 
-🔖 Example: "FluxCD Polls Git"
+## 🔖 Example: "FluxCD Polls Git"
 ```yaml
 - title: "FluxCD Watches Git"
   description: "FluxCD continuously polls the Git repository."

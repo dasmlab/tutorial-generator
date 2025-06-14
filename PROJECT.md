@@ -54,19 +54,23 @@ Enable consistent, branded educational flows for each `dasmlab` project via a de
 ## 📁 Example Structure
 
 dasmlab_tuto_generator/
-├── tutorials/
-│ └── fluxcd_gitops.yaml
-├── renderer/ # D3/SVG slide engine
-├── player/ # Vue/Quasar frontend
-├── tts_engine/ # TTS backend integration
-├── scripts/ # CLI tools for building
-├── assets/ # Shared media (icons, audio, font)
-├── PROJECT.md
-└── README.md
-
-yaml
-Copy
-Edit
+   	|  
+	|- tutorials/
+	|	|- fluxcd_gitops.yaml
+        |
+	|- renderer/ # D3/SVG slide engine
+        |
+	|- player/ # Vue/Quasar frontend
+        |
+	|- tts_engine/ # TTS backend integration
+        |
+	|- scripts/ # CLI tools for building
+        |
+	|- assets/ # Shared media (icons, audio, font)
+        |
+	|- PROJECT.md
+        |
+	|- README.md
 
 ---
 
